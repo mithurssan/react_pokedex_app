@@ -4,14 +4,13 @@ import Pokecard from '../Pokecard'
 const Pokedex = ({ pokemon }) => {
     return (
         <>
+            <h1 className="title">Pokedex</h1>
             <div className="pokedex-container">
-                <div className="pokecard">
-                    {
-                        pokemon.map((pokemon, idx) => {
-                            return <Pokecard key={idx} pokemon={pokemon} />
-                        })
-                    }
-                </div>
+                {
+                    pokemon.map((pokemon, idx) => {
+                        return <Pokecard key={idx} pokemon={pokemon} />
+                    })
+                }
             </div>
         </>
     )
